@@ -4,13 +4,15 @@ y = input("input y:")
 c = input("input c:")
 
 if c=="/":
-    print(int(x)/int(y))
+    print("x/y=",int(x)/int(y))
 if c=="+":
-    print(int(x)+int(y))
+    print("x+y=",int(x)+int(y))
 if c=="*":
-    print(int(x)*int(y))
+    print("x*y=",int(x)*int(y))
 if c=="-":
-    print(int(x)-int(y))
+    print("x-y=",int(x)-int(y))
+
+
 
 
 
