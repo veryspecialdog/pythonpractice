@@ -1,10 +1,15 @@
-
-y=0
-for x in range(1,10):
-        while y<9:
+for x in range(0,10):
+        y=x
+        while x<9:
+            x+=1
+            while y<9:
                 y +=1
+                print('{}x{}={}\t'.format(x,y,x*y),end='')
                 
-                print(x,y)
+                
+        
+
+
         
         
         
