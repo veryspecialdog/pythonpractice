@@ -1,8 +1,12 @@
-x=0
-y=x
-while x<9:
-        x+ =1
-        print(x)
+
+y=0
+for x in range(1,10):
+        while y<9:
+                y +=1
+                
+                print(x,y)
+        
+        
         
             
         
