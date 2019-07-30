@@ -1,13 +1,17 @@
 x=1
-y=1
 
-        print("{}X{}={}\t".format(y,x,x*y),end="")
+while x <10:
+    print (x)
+    x+ =1
+
+   
+        
     
         
            
                     
             
-    print()                 
+                    
             
                     
                            
