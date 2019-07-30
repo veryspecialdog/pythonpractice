@@ -1,8 +1,30 @@
-x=1
+x=0
+while x<9:
+        x+=1
+        print(x)
+     
+       
+    
+        
 
-while x <10:
-    print (x)
-    x+ =1
+    
+    
+    
+
+
+
+    
+           
+    
+     
+
+
+
+    
+    
+
+
+
 
    
         
