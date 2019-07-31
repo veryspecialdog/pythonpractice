@@ -4,7 +4,7 @@ for x in range(0,10):
             x+=1
             while y<9:
                 y +=1
-                print('{}x{}={}\t'.format(x,y,x*y),end='')
+                print('{}x{}={}\n'.format(x,y,x*y),end='')
                 
                 
         
