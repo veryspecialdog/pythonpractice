@@ -4,8 +4,10 @@ while x<9:
     
     y=0
     while y<9:
-        y +=1
+        y +=x-1
         print("{}x{}={}\t".format(y,x,y*x),end='')
+            break
+            
         
 
     
