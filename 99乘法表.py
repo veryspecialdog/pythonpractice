@@ -1,11 +1,14 @@
-x=1
-while x<10:
-    print(x)
+x=0
+while x<9:
+    
     x +=1
-    y =1
-    while y<10:
+    y =0
+    while y<9:
         y +=1
-        print(y,x)
+        if y % 2 ==0:
+            print("{}x{}={}\t".format(x,y,x*y),end='')
+        
+    print()
         
             
             
