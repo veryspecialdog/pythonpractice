@@ -1,8 +1,8 @@
-for x in range(0,10):
+for x in range(10,0):
     while x <9:
         x +=1
         
-        print("{}x{}={}\t".format(y,x,y*x),end='')
+        print("{}x{}={}\n".format(x,x,x*x),end='')
     print()
 
        
