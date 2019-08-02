@@ -1,9 +1,17 @@
-for x in range(10,0):
-    while x <9:
-        x +=1
+x = 1
+while x < 10:
+    y = 1
+    while y <= x:
+        print(x,y)
+        break
         
-        print("{}x{}={}\n".format(x,x,x*x),end='')
-    print()
+    
+    
+   
+      
+      
+        
+    
 
        
         
