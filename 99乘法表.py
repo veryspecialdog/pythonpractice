@@ -5,8 +5,12 @@ while x < 10:
         print('%d*%d=%d\t' %(x,y, x*y) , end='')
         y +=1 
     print()
-    x +=1
+    x +=2
 print()
+
+  
+      
+
 
       
        
