@@ -26,7 +26,7 @@ t3=[]
 for i in t2:
     if "ea" not in i:
         t3.append(i)
-        print(t3)   
+    print(t3)  
 
 
 
