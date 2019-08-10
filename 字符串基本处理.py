@@ -26,7 +26,15 @@ t3=[]
 for i in t2:
     if "ea" not in i:
         t3.append(i)
-    print(t3)  
+t4=" "
+t5=t4.join(t3)  
+
+t6=t5.lower()
+t7=t5.split()
+t8=t7.copy()
+t8.sort()
+t9=" ".join(t8)
+print(t9)
 
 
 
