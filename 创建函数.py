@@ -4,6 +4,8 @@ while x<=10:
     while y<=10:
         print(y)
         y +=1
+    print(X)
+    x+1
 
 
    
