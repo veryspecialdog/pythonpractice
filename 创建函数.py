@@ -12,3 +12,14 @@ print(values)
 
 x,y,z = values
 print(x)
+
+name = input('what i your name?')
+if name.endswith('Gumby'):
+    if name.startwith('Mr.'):
+        print('hello,mr. gumnby')
+    elif name.startswith('Mrs.'):
+        print('hello,mrs.gumby')
+    else:
+        print('hello,gumby')
+else:
+    print('hello,stranger')
