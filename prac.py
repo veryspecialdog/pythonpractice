@@ -1,7 +1,17 @@
-def fibs(n):
-    numbers=[0,1]
-    for i in range(n-2):
-        numbers.append(numbers[-1]+numbers[-2])
-    return numbers
+def try_to_changge(n):
+    n = 'Mr. Gumby'
 
-print(fibs(8))
+name = 'Mrs.Entity'
+try_to_changge(name)
+print(name)
+def change(n):
+    n[0] = 'Mr.Gumby'
+names = ['Mrs.Entity','Mrs.thing']
+change(names)
+print(names)
+
+names = ['Mr.Entity','Mrs.Thing']
+n = names
+n[0] = 'Mr.Gumby'
+
+print(names)
