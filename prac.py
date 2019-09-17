@@ -1,3 +1,3 @@
-name = 'Ann'
-age ='22'
-print(f'{name} is {age} years old.')
+s="\r \t simple is better than complex.          \t \n"
+
+print(s.strip())
