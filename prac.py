@@ -1,29 +1,20 @@
 import random
-n = 10
-a_list = [random.randrange(1,100) for i in range(n)]
-print(f'a_list comprehends {len(a_list)} random numbers:\n',a_list)
+n = 3
+a_list =[random.randrange(65,91) for i in range(n)]
+print(a_list)
 
-a_list.sort()
-print('the list sorted:\n',a_list)
+print()
+a_list.insert(1,'example')
 
-a_list.sort(reverse= True)
-print('the list sorted reverse:\n',a_list)
+print()
+print(a_list)
+a_list.remove('example')
+print(a_list)
 
-import random
-n =10
-
-a_list=[chr(random.randrange(65,91)) for i in range(n)]
-print(f'a_list comprehends {len(a_list)} random string elements:\n',a_list)
-
-a_list.sort()
-print('the list sorted:\n',a_list)
-
-a_list.sort(reverse = True)
-print('the list sorted reversely:\n',a_list)
-
-b_list =[chr(random.randrange(65,91)) +\
-            chr(random.randrange(97,123))\
-            for i in range(n)]
-print(f'b_list comprehends {len(b_list)} random string elements:\n',b_list)
-
-            
+print()
+print(a_list)
+print()
+print(a_list)
+p = a_list.pop(2)
+print(a_list)
+print(p)
