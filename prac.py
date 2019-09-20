@@ -1,20 +1,12 @@
-import random
-n = 3
-a_list =[random.randrange(65,91) for i in range(n)]
-print(a_list)
+import matplotlib.pyplot as plt 
+from matplotlib_venn import venn2
 
-print()
-a_list.insert(1,'example')
+admins = {'Moose','Joker','Joker'}
+moderators = {'Ann'，'Chris','Jane','Moose','Zero'}
 
-print()
-print(a_list)
-a_list.remove('example')
-print(a_list)
+v=venn2(subsets=(admins,moderators),set_labels=('admins','moderators'))
+v.get_label_by_id('11').set_text('\n'.join(admins & moderators))
+v.get_label_by_id('10').set_text('\n'.join(admins - moderators))
+v.get_label_by_id('01').set_text('\n'.join(admins ^ moderators))
 
-print()
-print(a_list)
-print()
-print(a_list)
-p = a_list.pop(2)
-print(a_list)
-print(p)
+plt.show()
