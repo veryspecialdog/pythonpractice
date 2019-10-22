@@ -1,7 +1,8 @@
-def say_hi(greeting,*names,capitalized=False):
-    for name in names:
-        if capitalized:
-            name = name.capitalize()
-        print(f'{greeting},{name}!')
+def make_incrementor(n):
+    return lambda x:x+n
 
-say_hi('hello','mike','john','zeo',capitalized= True)
+f = make_incrementor(42)
+
+print(f(0))
+
+print(f(1))
