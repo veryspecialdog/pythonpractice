@@ -1,4 +1,7 @@
-def do_sonmething():
-    print('this is a hello message from do_something().')
+def say_hi(greeting,*names,capitalized=False):
+    for name in names:
+        if capitalized:
+            name = name.capitalize()
+        print(f'{greeting},{name}!')
 
-print(do_sonmething())
+say_hi('hello','mike','john','zeo',capitalized= True)
