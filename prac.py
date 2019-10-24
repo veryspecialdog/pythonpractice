@@ -1,8 +1,12 @@
-def make_incrementor(n):
-    return lambda x:x+n
+def _is_leap(year):
+    return year % 4 == 0 and (year % 100 !=0 or year % 400 == 0)
 
-f = make_incrementor(42)
+year_leap_bool = _is_leap
 
-print(f(0))
+print(year_leap_bool(800))
 
-print(f(1))
+print(id(year_leap_bool))
+print(id(_is_leap))
+
+print(type(year_leap_bool))
+print(type(_is_leap))
