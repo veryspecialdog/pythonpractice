@@ -1,20 +1,6 @@
-def is_prime(n):
-    """
-    Return a boolean value based upon
-    wheher the argument n is a prime number.
-    """
-    if n<2:
-        return False
-    if n == 2:
-        return True
-    for m in range(2,int(n**0.5)+1):
-        if (n % m) == 0:
-            return False
-    else:
-        return True
-
-help(is_prime)
-print(is_prime.__doc__)
-is_prime.__doc__
+try:
+    f = open('test_file.text','r')
+except FileNotFoundError as fnf_error:
+    print(fnf_error)
    
        
