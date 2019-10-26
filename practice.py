@@ -1,5 +1,20 @@
-v='one googol is {:,}'.format(10**100)
-print(v)
+def is_prime(n):
+    """
+    Return a boolean value based upon
+    wheher the argument n is a prime number.
+    """
+    if n<2:
+        return False
+    if n == 2:
+        return True
+    for m in range(2,int(n**0.5)+1):
+        if (n % m) == 0:
+            return False
+    else:
+        return True
 
-v2="{:.5}".format("Guido van Rossum")
-print(v2)
+help(is_prime)
+print(is_prime.__doc__)
+is_prime.__doc__
+   
+       
