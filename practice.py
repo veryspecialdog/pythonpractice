@@ -1,11 +1,12 @@
-import dateime
+import datetime
 
 class Golem:
     def __init__(self,name=None):
         self.name = name
-        self.built_year = datetime.data.today().year 
+        self.built_year = datetime.date.today().year 
     
     def say_hi(self):
         print('Hi!')
-print(g=Golem('Clay'))
+
+g = Golem('Clay')
 
