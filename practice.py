@@ -1,6 +1,18 @@
-for i in range(65,97):
-    print(i)
+class Golem:
+    def __init__(self,name=None):
+        self.name = name
+        self.built_year = datetime.data.today().year 
+    def say_hi(self):
+        print('Hi!')
+    
+    g = Golem('Clay')
+    g.name
+    g.built_year
+    g.say_hi
+    g.say_hi()
+    type(g)
+    type(g.name)
+    type(g.built_year)
+    type(g.__init__)
+    type(g.say_hi)
 
-help(chr)
-    
-    
