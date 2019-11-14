@@ -1,21 +1,23 @@
 import datetime
 
 class Golem:
-    def __init__(self,name = None):
-    self.name = name 
-    self.built_year = datetime.date.today().year
-
-    def say_hi(self):
-        print('Hi!')
-
-class runningGolem(Golem):
-    def run(self):
-        print("can't you see? I'm running...")
+    def __init__(self,name=None):
+        self.name = name
+        self.built_year = datetime.date.today().year
     
     def say_hi(self):
-        print('Hey! Nice day,Huh?')
+        print('Hi!')
+class runningGolem(Golem):
+    def run(self):
+        print("can't you see?I'm running...")
+    def say_hi(self):
+        print('Hey!Nice day,Huh?')
 
-rg = runningGolem('Clay')
+rg=runningGolem('Clay')
+help(rg)
+print(dir(rg))
+print(rg.__dict__)
+print(hasattr(rg,'built_year'))
 
     
 
