@@ -1,23 +1,17 @@
-import datetime
+def is_prime(n):
+    if n <2:
+        return False
+    if n == 2:
+        return True
+    for m in range(2,int(n**0.5)+1):
+        if (n % m) == 0:
+            return False
+        else:
+            return True
 
-class Golem:
-    def __init__(self,name=None):
-        self.name = name
-        self.built_year = datetime.date.today().year
-    
-    def say_hi(self):
-        print('Hi!')
-class runningGolem(Golem):
-    def run(self):
-        print("can't you see?I'm running...")
-    def say_hi(self):
-        print('Hey!Nice day,Huh?')
-
-rg=runningGolem('Clay')
-help(rg)
-print(dir(rg))
-print(rg.__dict__)
-print(hasattr(rg,'built_year'))
+for i in range(80,110):
+    if is_prime(i):
+        print(i)
 
     
 
