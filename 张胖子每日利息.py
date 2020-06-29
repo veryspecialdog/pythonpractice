@@ -1,7 +1,12 @@
-for x in range(1,31):
-        print(x)
+for n in range(1,31):
+        a=100000
+        r=0.0075
+        s=a*(1+r)**n
+        print(int(s))
         
 
+        
+        
 
 
 
