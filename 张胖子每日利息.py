@@ -1,9 +1,17 @@
+print(f'利息按复利计算')
+for n in range(1,31):
+        a=100000 #本金
+        r=0.0075 #每日利率
+        s=a*(1+r)**n
+        print(f'第{n}天：{int(s)}')
+
+print(f'利息不按复利')
+
 for n in range(1,31):
         a=100000
-        r=0.0075
-        s=a*(1+r)**n
-        print(int(s))
-        
+        s=a+750*n
+        print(f'第{n}天：{s}')       
+
 
         
         
