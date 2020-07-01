@@ -71,8 +71,21 @@ print(a_list)
 a_list.extend(c_list)
 print(c_list)
 
+#在索引的某个位置插入一个元素
 print(a_list)
 a_list.insert(1,'example')
 a_list.insert(3,'example')
 print(a_list)
+
+#排序
+
+#a_list.sort()这一句出错，因为当前列表中的元素是由int和str混合组成的
+
+print()
+print(a_list)
+a_list.reverse()
+print(a_list)
+x = a_list.reverse()
+print(x)
+
 
