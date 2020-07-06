@@ -1,6 +1,6 @@
 import requests
 from lxml import etree
 
-url ='https://home.firefoxchina.cn/'
+url ='https://movie.douban.com/chart'
 html = requests.get(url).content.decode('utf-8')
 print(html)
