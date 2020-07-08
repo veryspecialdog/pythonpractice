@@ -1,86 +1,39 @@
-#!/usr/bin/env python
-
-# -*- coding: utf-8 -*-
-
 import requests
-
 import re
+import json
+import time
 
-#下载一个 网页
+def get_one_page(url):
+    try:
+        headers={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) \
+                 AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36'}
+        response=requests.get(url, headers=headers)
+        if response.status_code==200:
+            return response.text
+        return None
+    except requests.RequestException:
+        print("Fail")
 
-url ='http://www.17k.com/list/2932117.html'
+def parse_one_page(html):
+    pattern=re.compile('<dd>.*?board-index.*?>(.*?)</i>.*?data-src="(.*?)".*?name.*?a.*?>(.*?)</a>.*?releasetime.*?>(.*?)</p>.*?score.*?integer">(.*?)</i>.*?fraction">(.*?)</i>.*?</dd>', re.S)
+    result=re.findall(pattern, html)
+    for item in result:
+        yield {"index": item[0], "movie_name": item[2],\
+                "pic": item[1], "release": item[3],\
+                "score": item[4]+item[5]}
 
-#模拟浏览器发送http请求
+def write_to_file(result):
+    with open ("result.txt","a") as f:
+        f.write(json.dumps(result, ensure_ascii=False)+'\n')
 
-response = requests.get(url)
+def main(offset):
+    url="https://maoyan.com/board/4?offset={}".format(offset)
+    html=get_one_page(url)
+    result=parse_one_page(html)
+    for i in result:
+        write_to_file(i)
 
-response.encoding ='utf-8'
-
-html = response.text
-
-#小说标题
-
-tittle = re.findall(r'<h1 class="Title">(.*?)</h1', html)[0]
-
-#print(tittle)
-
-#新建文件保存小说内容
-
-fb =open('%s.txt' % tittle, 'w', encoding ='utf-8')
-
-dl = re.findall(r'<dl class="Volume">.*?</dl>', html, re.S)[0]
-
-dd = re.findall(r'<dd>.*?</dd>', dl, re.S)[0]
-
-#注意正则表达式易错，.不能代替换行符
-
-chapter_info_list = re.findall(r'href="(.*?)".*?>\n.*?<span class="ellipsis.*?">\n\s{60}(.*?)\s{52}<', dd)
-
-#新建文件保存小说内容
-
-#with open('%s.txt' % tittle) as f:
-
-#循环每个章节，分别下载
-
-for chapter_infoin chapter_info_list:
-
-#chapter_tittle = chapter_info[1]
-
-#chapter_url = chapter_info[0]
-
-    chapter_url, chapter_tittle = chapter_info
-
-chapter_url ="http://www.17k.com%s" % chapter_url
-
-#print(chapter_url, chapter_tittle)
-
-#下载章节内容
-
-    chapter_response = requests.get(chapter_url)
-
-chapter_response.encoding ='utf-8'
-
-    chapter_html = chapter_response.text
-
-#读取章节内容
-
-    chapter_content = re.findall(r'<div class="p">(.*?)<div class="author-say"></div>', chapter_html, re.S)[0]
-
-#清洗数据
-
-    chapter_content = chapter_content.replace(' ', '')
-
-chapter_content = chapter_content.replace('&#12288;', '')
-
-chapter_content = chapter_content.replace('<br/>', '')
-
-#持久化
-
-    fb.write(chapter_tittle)
-
-fb.write(chapter_content)
-
-fb.write('\n')
-
-print(chapter_url, chapter_tittle)
-
+if __name__=='__main__':
+    for i in range(10):
+        main(offset=i*10)
+        time.sleep(1)
