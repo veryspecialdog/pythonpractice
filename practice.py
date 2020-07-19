@@ -1,8 +1,7 @@
-s = 'Python'
-for char in s:
-    print(s.index(char),char)
-    
-
+cd ~ /Downloads
+git clone https://github.com/python/cpython.git
+cd cpython/Doc/tutorial
+ls
 
 
 
