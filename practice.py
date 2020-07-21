@@ -1,12 +1,7 @@
-def fib_between(start,end):
-    a,b = 0,1
-    while a< end:
-        if a >= start:
-            print(a,end='')
-        a,b =b,a + b
+def be_careful(a,b):
+    a =2
+    b[0] ='What?!'
 
-print(fib_between(100,10000))
-
-
-
-
+a =1
+b =[1,2,3]
+print(be_careful(a,b))
