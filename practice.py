@@ -1,10 +1,11 @@
-def is_leap(year):
-    leap = False
-    if year % 4 == 0:
-        leap =True
-        if year % 100 == 0 and year % 400! == 0:
-            leap = False
-    return leap
+def fib_between(start,end):
+    a,b = 0,1
+    while a< end:
+        if a >= start:
+            print(a,end='')
+    a,b =b,a + b
+
+print(fib_between(100,10000))
 
 
 
