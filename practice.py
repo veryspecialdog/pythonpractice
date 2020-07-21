@@ -1,7 +1,10 @@
-def do_something():
-    print('this id a hello message from do_something().')
-if not do_something():
-    print("the return value of'do_something()' is None.")
+def is_leap(year):
+    leap = False
+    if year % 4 == 0:
+        leap =True
+        if year % 100 == 0 and year % 400! == 0:
+            leap = False
+    return leap
 
 
 
