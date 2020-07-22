@@ -30,3 +30,6 @@ def say_hi(*names,greeting ='Hello',capitalized=False):
             name =name.capitalized()
         print(f'{greeting},{name}!')
 
+print(is_prime(7))
+
+print(say_hi('jhone','joe','mike'))
