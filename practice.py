@@ -1,18 +1,18 @@
-def say_hi(*names):
-    for name in names:
-        print(f'Hi,{name}!')
+def is_prime(n):
+    """
+    Return a boolean value based upon
+    whether the argument n is a prime number.
+    """
+    if n < 2:
+        return False
+    if n == 2:
+        return True
+    for m in range(2,int(n**0.5)+1):
+        if (n%m) ==0:
+            return False
+    else:
+        return True
 
-names = ('mike','John','zeo')
-say_hi(*names)
-
-a_string ='Python'
-say_hi(*a_string)
-
-a_range =range(10)
-say_hi(*a_range)
-
-a_list = list(range(10,0,-1))
-say_hi(*a_list)
-
-a_dictionary ={'ann':2321,'mike':8712,'joe':7610}
-say_hi(*a_dictionary)
+help(is_prime)
+print(is_prime.__doc__)
+is_prime.__doc__
