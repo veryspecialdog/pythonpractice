@@ -1,19 +1,11 @@
-import os
+import mycode
 
-with open('test-file.txt','w')  as f:
-    f.write('first line\n second line \n third line\n')
+help(mycode.is_prime)
+help(mycode.say_hi)
 
-with open ('test-file.txt','r') as f:
-    for line in f.readlines():
-        print(line)
-
-if os.path.exists(f.name):
-    os.remove(f.name)
-    print(f'{f.name} deleted.')
-else:
-    print(f'{f.name} does not exist.')
-
-
+print(mycode.__name__)
+mycode.is_prime(3)
+mycode.say_hi('mike','zoe')
 
 
 
