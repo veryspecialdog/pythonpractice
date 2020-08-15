@@ -1,10 +1,13 @@
-def is_leap(year):
-    if year %4  == 0:
-        print(f'{} is leap year!')
-    else:
-        print(f'{} is not leap year!')
+import this
+love = this
 
+print(id(this))
+print(id(love))
+
+
+        
+
+        
+        
     
-
-print(is_leap(4))
-
+        
