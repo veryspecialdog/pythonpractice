@@ -18,10 +18,14 @@ class Golem:
         Golem.__population -=1
     
     def is_active(self):
-        if datetime.date.today().year - self.built_year >= Golem._life_span:
+        if datetime.date.today().year - self.built_year >= Golem.__life_span:
             self.cease()
         return self.__active
+        
+    def population(self):
+        return Golem.__population
 
 g = Golem('Clay')
 print(g.population)
+print(g.population())
 
