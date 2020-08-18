@@ -1,3 +1,6 @@
-
-sum_of_even = sum(e for e in range(10) if not e % 2)
-print(sum_of_even)
+def a_func():
+    def b_func():
+        print("Hi,I'm b_func!")
+    print("Hi,I'm a_func!")
+    b_func()
+print(a_func())
