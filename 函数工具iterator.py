@@ -8,22 +8,16 @@ class Counter(object):
         if self.current > self.stop:
             raise StopIteration
         else:
-            c = self.current
-            self.current += 1
+            c =self.current
+            self.current +=1
         return c
 
-c = Counter(11,20)
-print(next(c))
-print(next(c))
-print(next(c))
-print(next(c))
+for c in Counter(101,103):
+    print(c,sep=',')
 
-for c in Counter(101,107):
-    print(c,end=',')
-
-c =Counter(201,203)
+c = Counter(201,203)
 while True:
     try:
-        print(next(c),sep=",")
+        print(next(c),sep=',')
     except StopIteration:
         break
