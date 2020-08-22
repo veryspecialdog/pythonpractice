@@ -1,2 +1,2 @@
-import this
-print(this.s)
+import string
+print(string.ascii_letters)
